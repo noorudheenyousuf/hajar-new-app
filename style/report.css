@@ -1,0 +1,181 @@
+/* Report Button Container */
+.report-filter-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    padding-bottom: 30px;
+    margin: 16px;
+    background-color: white;
+    border-radius: 20px;
+}
+.report-student-teacher-class-buttons-div {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    background-color: #d3dbe3;
+    padding: 8px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    margin: 16px;
+}
+
+.report-student-teacher-class-buttons-div button {
+    background-color: #2f5e8c;
+    color: aliceblue ;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    flex: 1;
+}
+
+.report-filter-container p {
+    color: gray;
+    font-size: 15px;
+    margin-top:6px;
+    margin-bottom: 4px;
+
+}
+
+.students-dropdown,
+.subject-dropdown {
+    width: 100%;
+    background-color: #f4f7fa;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 10px;
+    padding: 15px 13px;
+    font-size: 17px;
+    font-family: Plus Jakarta Sans,system-ui,sans-serif;
+    
+} 
+
+.report-student-detail-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    margin: 16px;
+    background-color: white;
+    border-radius: 20px; 
+}
+
+.studentname-date-subject-div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+}
+
+.report-student-name {
+    font-size: 19px;
+    font-weight: bold;
+    color: black;
+    
+}
+
+.class-subject-date {
+    color: gray;
+    font-size: 12px;
+}
+
+.name-percent-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.percent-number {
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.graph-total-attended-missed-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.graph-div {
+    width: 100%;
+    background-color: #f4f7fa;
+    height: 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.total-attended-missed-container {
+    display: flex;
+    gap: 20px;
+}
+
+.total-attended-missed-div {
+    width:100px;
+    height: 100px;
+    background-color: #f4f7fa;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.total-number {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.total-title ,
+.attended-title, 
+.missed-title,
+.report-container-ramaining-text {
+    color: gray;
+    font-size: 14px;
+}
+
+.report-container-ramaining-text {
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.attended-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: green;
+}
+
+.missed-number {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
+
+.print-savepdf-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin: 16px;
+}
+
+.print-savepdf-div button {
+    background-color: #f4f7fa;
+    border: none;
+    border-radius:15px;
+    padding: 9px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex:1;
+    font-size: 15px;
+}

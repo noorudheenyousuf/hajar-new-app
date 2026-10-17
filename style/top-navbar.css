@@ -1,0 +1,110 @@
+header {
+            background-color: aqua;
+            padding: 15px;
+            background: linear-gradient(135deg, #245b70, #43888a);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+        }
+        
+
+        .profile-onlinestatus-div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .user-info-container {
+            display: flex;
+            gap: 7px;
+        }
+        .profile-picture {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+        }
+
+        .signintext-profilename-div {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            
+        }
+        .sign-in-text {
+            font-size: 13px;
+            color: #ffffffd5;
+            
+        }
+
+        .profile-name {
+            font-size: 15px;
+            color: #edebebf6;
+                       
+        }
+
+        .online-text-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+            background-color: rgba(236, 228, 228, 0.097);
+            border-radius: 15px;
+            padding: 0px 9px;
+            gap: 4px;
+            height: 19px;
+            
+            
+        }
+        .online-text-div svg {
+            height: 14px;
+        }
+
+
+
+
+        .hajar-title {
+            font-family: Sora, system-ui, sans-serif;
+            font-size: 35px;
+            font-weight: 800;
+            line-height: 2.25rem;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            color: white;
+            letter-spacing: -.025em;
+        }
+
+        .top-nav-buttons-container {
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-left: 8px;
+            margin-right: 10px;
+        }
+
+        .top-nav-buttons {
+            background-color: transparent;
+            border: none;
+            color: aliceblue;
+            padding: 11px 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            
+
+        }
+
+        
+
+        .top-nav-buttons.active,
+        .top-nav-buttons:active {
+            background-color: white;
+            border-radius: 10px;
+            color: #245b70;
+            cursor: pointer;
+            padding: 11px 30px;
+            font-weight: 600;
+        }

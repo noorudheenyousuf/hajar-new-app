@@ -1,0 +1,82 @@
+
+body {
+    margin: 0;
+    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    padding-top: 190px;
+    padding-bottom: 95px;
+    background-color: #e5e7eb;
+    
+}
+
+/* --- Dark Theme Styles --- */
+body.dark-theme {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+/* ഡാർക്ക് മോഡിൽ എല്ലാ കാർഡുകളും ബോക്സുകളും മാറുവാൻ */
+
+
+
+body.dark-theme div,
+body.dark-theme main,
+
+body.dark-theme header,
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border-color: #333333;
+    background: #1e1e1e;
+    
+    
+}
+
+/* കണ്ടെയ്നറുകൾക്കും കാർഡുകൾക്കും ബാക്ക്ഗ്രൗണ്ട് മാറ്റാൻ */
+
+
+body.dark-theme .profile-container,
+body.dark-theme .appearance-container,
+body.dark-theme .data-management-container,
+body.dark-theme .report-student-detail-container,
+body.dark-theme .report-filter-container,
+body.dark-theme .students-list-attendence-div,
+body.dark-theme .students-list-attendence-absent-div,
+body.dark-theme button,
+body.dark-theme .students-list-div {
+    background-color: #1e1e1e !important;
+    border: 1px solid #4d4949;
+    color: #ffffff !important;
+}
+
+/* Text colors dark mode-ൽ കൃത്യമാക്കാൻ */
+body.dark-theme p,
+body.dark-theme span,
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3 {
+    color: #e0e0e0 !important;
+}
+
+/* Input boxes & Dropdowns */
+body.dark-theme input[type="text"],
+body.dark-theme select {
+    background-color: #2b2b2b !important;
+    color: #ffffff !important;
+    border: 1px solid #444444 !important;
+}
+
+
+
+
+
+
+p {
+  margin: 0;
+}
+
+
+

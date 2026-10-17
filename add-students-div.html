@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#245b70">
+    <title>Wackha Hajar App</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="style/top-navbar.css">
+    <link rel="stylesheet" href="style/bottom-navbar.css">
+    <link rel="stylesheet" href="style/general.css">
+    <link rel="stylesheet" href="style/attendence-filter.css">
+    <link rel="stylesheet" href="style/add-students.css">
+    <link rel="icon" type="image/png" href="./icon/attendence-icon-64.png">
+</head>
+<body>
+    
+<!-- Header -->
+ 
+    <header>
+        <div class="profile-onlinestatus-div">
+            <div class="user-info-container">
+                <img class="profile-picture" src="images/nooru.jpeg" alt="">
+                <div class="signintext-profilename-div">
+                    <p class="sign-in-text">Signed In</p> 
+                    <strong class="profile-name">NOORUDHEEN SAQAFI</strong>
+                </div>
+            </div>            
+            <div class="online-text-div">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wifi" aria-hidden="true"><path d="M12 20h.01"></path><path d="M2 8.82a15 15 0 0 1 20 0"></path><path d="M5 12.859a10 10 0 0 1 14 0"></path><path d="M8.5 16.429a5 5 0 0 1 7 0"></path></svg>
+                <p class="online-text">Online</p>
+            </div>
+        </div>
+
+
+        <p class="hajar-title">Hajar </p>
+        <div class="top-nav-buttons-container">
+            <button class="top-nav-buttons active">Attendence</button>
+            <button class="top-nav-buttons">Reports</button>
+            <button class="top-nav-buttons">Settings</button>
+        </div>
+    </header>
+
+<!-- Add Student Tab -->
+    <main>
+        <div class="overlay-div">
+            <div class="add-student-window">
+            <div class="addstudent-title-x-div">
+                <p class="add-student-title">Add Student</p>
+                <button>X</button>
+            </div>
+            <div class="image-div">
+                <input type="file" id="photo-upload" accept="image/*" hidden>
+    
+    <!-- ക്ലിക്ക് ചെയ്യാവുന്ന കാർഡ് ഡിസൈൻ -->
+            <label for="photo-upload" class="upload-box">
+                <!-- Camera Plus SVG Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#007a5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                    <circle cx="12" cy="13" r="4"></circle>
+                    <line x1="19" y1="9" x2="19" y2="15"></line>
+                    <line x1="16" y1="12" x2="22" y2="12"></line>
+                </svg>
+                <span class="upload-text">PHOTO</span>
+            </label>
+            </div>
+            
+            <p class="name-class-text">Name</p>
+            <input name="" class="name-input" type="text" placeholder="Student name">
+            <p class="name-class-text">Class</p>
+            <select name="class" class="class-dropdown-2">
+                        <option value="" selected>Select...</option>
+                        <option value="plus-one" >Plus one</option>
+                        <option value="plus-two">Plus two</option>
+                        <option value="bs1" >Bs1</option>
+                        <option value="bs2">Bs2</option>
+                        </select>
+                        <p class="rollno-text">Roll No.</p>
+            <input name="rollNo" class="rollno-input" type="number">
+            
+            <p class="id-text">Student Id</p>
+            <input name="id" class="id-input" type="number" placeholder="Enter student id">
+
+            <p class="address-text">Address</p>
+            <input name="address" class="address-input" type="text" name="" id="" placeholder="Residential Address">
+
+            
+            
+            <p class="place-text">Place</p>
+            <input name="place" class="place-input" type="text">
+
+            <p class="district-text">Place</p>
+            <input name="district" class="district-input" type="text">
+
+            <p class="state-text">State</p>
+            <input name="state" class="state-input" type="text">
+
+            <p class="family-text">Family Details</p>
+
+            <p class="father-name">Father's Name</p>
+            <input name="fatherName" class="father-input" type="text">
+
+            <p class="mother-name">Mother's Name</p>
+            <input name="motherName" class="mother-input" type="text">
+            
+            <p class="contact-no">Father's Mobile</p>
+            <input name="fatherMobile" class="contact-no-input" type="number" placeholder="Enter WhatsApp No...">
+            
+            <p class="academic-text">Academic Status</p>
+            
+
+            <p class="admission-date-text">Admission Date</p>
+            <input name="admissonDate" class="father-input" type="text">
+
+            <p class="rank-text">Rank</p>
+            <input name="rank" class="rank-input" type="text">
+
+            <p class="previous-college-text">Previous College</p>
+            <input name="previousCollege" class="previous-college-input" type="text">
+
+
+            <button class="addstudent-submit-button">Add Student</button>
+
+
+            
+            </div>
+        </div>
+        
+    </main>
+
+<!-- Bottom Navbar -->
+    <footer>
+        <div class="bottom-navbar-container">
+            <button class="bottom-nav-button active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-plus" aria-hidden="true" style="color: var(--text-muted);"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
+                <p>Students</p>
+            </button>
+            <button class="bottom-nav-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users" aria-hidden="true" style="color: var(--text-muted);"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                <p>Teachers</p>
+            </button>
+            <button class="bottom-nav-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-grid" aria-hidden="true" style="color: var(--primary);"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>
+                <p>Classes</p>
+            </button>
+            <button class="bottom-nav-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open" aria-hidden="true" style="color: var(--text-muted);"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>
+                <p>Subjects</p>
+            </button>      
+        </div>
+    </footer>
+
+
+
+
+
+    <script src="./scripts.js"></script>
+</body>
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+.bottom-navbar-container {
+   display: flex; 
+   justify-content: space-between;
+   background-color: white;
+   border-top: solid 1px rgb(235, 232, 232);
+   padding: 15px;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   right: 0;
+}
+
+.bottom-nav-button {
+    font-size: px;
+    border: none;
+    background-color: white;
+    color: rgb(132, 131, 131);
+}
+
+.bottom-navbar-container {
+    padding-left: 14px;
+    padding-right: 14px;
+    
+
+}
+.bottom-navbar-svg {
+    width: 30px;
+    height: 30px;
+    padding-top:5px;
+    padding-left: 5px;
+    padding-right: 5px;   
+}
+.bottom-navbar-svg.active {
+    stroke:  #245b70;
+}
