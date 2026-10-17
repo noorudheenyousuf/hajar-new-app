@@ -54,20 +54,9 @@ export async function displayAttendanceView() {
 
     const attendencePageHTML = `
       <div class="attendence-filter-container js-attendence-filter-container">
-        <div class="student-staff-buttons-div">
-          <button class="active">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 6 0 0 0 12 0v-3.5"></path></svg>
-            Students
-          </button>
-          <button>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
-            Staff
-          </button>     
-        </div>
-
         <div class="date-title">
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
-          <p>Date</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+          <p>Attendance Date</p>
         </div>
         <input class="date-input js-date-input" type="date">
 
@@ -75,14 +64,14 @@ export async function displayAttendanceView() {
           <div class="class-subject-filter">
             <p>Class</p>
             <select name="class" class="class-dropdown js-class-dropdown">
-              <option value="" selected disabled>Select Class</option>
+              <option value="" selected disabled>Select Class...</option>
               ${classOptionsHTML}
             </select>
           </div>
           <div class="class-subject-filter">
             <p>Subject</p>
             <select name="subject" class="subject-dropdown js-subject-dropdown">
-              <option value="" selected disabled>Select Subject</option>
+              <option value="" selected disabled>Select Subject...</option>
               ${subjectOptionsHTML}
             </select>
           </div>
@@ -117,13 +106,12 @@ export async function displayAttendanceView() {
         (s) => !s.class || s.class.toLowerCase() === selectedClass.toLowerCase()
       );
       
-      let newSubOpts = '<option value="" selected disabled>Select Subject</option>';
+      let newSubOpts = '<option value="" selected disabled>Select Subject...</option>';
       if (filteredSubs.length > 0) {
         filteredSubs.forEach((sub) => {
           newSubOpts += `<option value="${sub.name}">${sub.name}</option>`;
         });
       } else {
-        // If no subjects match this specific class, show all subjects
         cachedSubjects.forEach((sub) => {
           newSubOpts += `<option value="${sub.name}">${sub.name}</option>`;
         });
@@ -217,7 +205,7 @@ export async function displayAttendanceView() {
                 <circle cx="12" cy="12" r="10"></circle>
                 ${isPresent ? '<path d="m9 12 2 2 4-4"></path>' : '<path d="m15 9-6 6"></path><path d="m9 9 6 6"></path>'}
               </svg>
-              <p>${isPresent ? 'present' : 'absent'}</p>
+              <p>${isPresent ? 'Present' : 'Absent'}</p>
             </div>
           </div>
         `;
@@ -247,7 +235,7 @@ export async function displayAttendanceView() {
           ${studentsCardsHTML}
         </div>
         <div class="save-button-div">
-          <button class="save-attendence-button js-save-attendance-btn">Save Attendence</button>
+          <button class="save-attendence-button js-save-attendance-btn">Save Attendance</button>
         </div>
       `;
 
@@ -308,7 +296,7 @@ export async function displayAttendanceView() {
             alert(`Error saving attendance: ${err.message}`);
           } finally {
             saveBtn.disabled = false;
-            saveBtn.textContent = 'Save Attendence';
+            saveBtn.textContent = 'Save Attendance';
           }
         });
       }

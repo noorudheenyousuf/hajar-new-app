@@ -1,82 +1,152 @@
+:root {
+  --primary: #245b70;
+  --primary-hover: #1b4758;
+  --primary-light: #e8f3f6;
+  --bg-page: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-input: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border: #e2e8f0;
+  --header-bg: linear-gradient(135deg, #245b70, #43888a);
+  --bottom-nav-bg: #ffffff;
+  --danger: #ef4444;
+  --danger-light: #fee2e2;
+  --success: #10b981;
+  --success-light: #d1fae5;
+  --card-radius: 16px;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-theme {
+  --primary: #38bdf8;
+  --primary-hover: #0284c7;
+  --primary-light: rgba(56, 189, 248, 0.15);
+  --bg-page: #0b1120;
+  --bg-card: #1e293b;
+  --bg-input: #0f172a;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --header-bg: linear-gradient(135deg, #0f2733, #1e293b);
+  --bottom-nav-bg: #0f172a;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    font-family: arial;
-    display: flex;
-    flex-direction: column;
-    padding-top: 190px;
-    padding-bottom: 95px;
-    background-color: #e5e7eb;
-    
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding-top: 180px;
+  padding-bottom: 95px;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  min-height: 100vh;
 }
-
-/* --- Dark Theme Styles --- */
-body.dark-theme {
-    background-color: #121212 !important;
-    color: #e0e0e0 !important;
-}
-
-/* ഡാർക്ക് മോഡിൽ എല്ലാ കാർഡുകളും ബോക്സുകളും മാറുവാൻ */
-
-
-
-body.dark-theme div,
-body.dark-theme main,
-
-body.dark-theme header,
-body.dark-theme input,
-body.dark-theme select,
-body.dark-theme button {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    border-color: #333333;
-    background: #1e1e1e;
-    
-    
-}
-
-/* കണ്ടെയ്നറുകൾക്കും കാർഡുകൾക്കും ബാക്ക്ഗ്രൗണ്ട് മാറ്റാൻ */
-
-
-body.dark-theme .profile-container,
-body.dark-theme .appearance-container,
-body.dark-theme .data-management-container,
-body.dark-theme .report-student-detail-container,
-body.dark-theme .report-filter-container,
-body.dark-theme .students-list-attendence-div,
-body.dark-theme .students-list-attendence-absent-div,
-body.dark-theme button,
-body.dark-theme .students-list-div {
-    background-color: #1e1e1e !important;
-    border: 1px solid #4d4949;
-    color: #ffffff !important;
-}
-
-/* Text colors dark mode-ൽ കൃത്യമാക്കാൻ */
-body.dark-theme p,
-body.dark-theme span,
-body.dark-theme h1,
-body.dark-theme h2,
-body.dark-theme h3 {
-    color: #e0e0e0 !important;
-}
-
-/* Input boxes & Dropdowns */
-body.dark-theme input[type="text"],
-body.dark-theme select {
-    background-color: #2b2b2b !important;
-    color: #ffffff !important;
-    border: 1px solid #444444 !important;
-}
-
-
-
-
-
 
 p {
   margin: 0;
 }
 
+header {
+  background: var(--header-bg) !important;
+  transition: background 0.2s ease;
+}
 
+.bottom-navbar-container {
+  background-color: var(--bottom-nav-bg) !important;
+  border-top: 1px solid var(--border) !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
 
+.bottom-nav-button {
+  background-color: transparent !important;
+  color: var(--text-muted) !important;
+}
+
+.bottom-nav-button.active {
+  color: var(--primary) !important;
+}
+
+/* Modal and dialog dark theme */
+body.dark-theme .add-student-window {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+}
+
+body.dark-theme .name-input,
+body.dark-theme .rollno-input,
+body.dark-theme .address-input,
+body.dark-theme .place-input,
+body.dark-theme .district-input,
+body.dark-theme .state-input,
+body.dark-theme .father-input,
+body.dark-theme .mother-input,
+body.dark-theme .contact-no-input,
+body.dark-theme .rank-input,
+body.dark-theme .previous-college-input,
+body.dark-theme .class-dropdown-2,
+body.dark-theme .class-dropdown,
+body.dark-theme .subject-dropdown,
+body.dark-theme .date-input,
+body.dark-theme .js-search-input {
+  background-color: var(--bg-input) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border) !important;
+}
+
+body.dark-theme .students-list-div {
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border) !important;
+}
+
+body.dark-theme .students-list-div p.student-name {
+  color: var(--text-main) !important;
+}
+
+body.dark-theme .search-bar-icon-div {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+body.dark-theme .search-bar-icon-div input {
+  color: var(--text-main);
+}
+
+body.dark-theme .attendence-filter-container {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+  }
+
+  header,
+  footer,
+  .print-savepdf-div,
+  .report-filter-container,
+  .report-view-toggle-div,
+  .report-timeframe-toggle-div,
+  .report-actions-bar,
+  .js-print-btn {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+}

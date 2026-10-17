@@ -1,15 +1,20 @@
 {
-    "name": "Hajar App",
+    "name": "Wackha Hajar App",
     "short_name": "Hajar",
-    "description": "Hajar Attendence Management App",
+    "description": "Hajar Attendance Management App",
     "start_url": "./index.html",
-    "background-color": "#245b70",
+    "background_color": "#245b70",
     "theme_color": "#245b70",
     "display": "standalone",
     "icons": [
         {
             "src": "./icons/attendence-icon-64.png",
             "sizes": "64x64",
+            "type": "image/png"
+        },
+        {
+            "src": "./icons/attendence-icon-192.png",
+            "sizes": "192x192",
             "type": "image/png"
         },
         {   

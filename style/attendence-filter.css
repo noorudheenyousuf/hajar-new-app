@@ -1,158 +1,128 @@
-/* Attendence filter */
+/* Attendance Filter & Attendance Marking Styles */
+
 .attendence-filter-container {
     display: flex;
     flex-direction: column;
-    padding: 25px;
-    margin: 16px;
-    background-color: white;
-    border-radius: 30px;
-}
-
-.student-staff-buttons-div {
-    display: flex;
-    justify-content: center;
-    gap: 4px;
-    background-color: #e2e8ef;
-    padding: 8px;
-    border-radius: 20px;
-    margin-bottom: 12px;
-}
-
-.student-staff-buttons-div button {
-    background-color: #2f5e8c;
-    color: aliceblue ;
-    border: none;
-    padding: 10px;
-    border-radius: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3px;
-    flex: 1;
+    padding: 18px 20px;
+    margin: 12px 14px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--card-radius);
+    box-shadow: var(--shadow);
 }
 
 .attendence-filter-container p {
-    color: gray;
-    font-size: 15px;
-    margin-top:6px;
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-top: 6px;
     margin-bottom: 4px;
-
+    font-weight: 500;
 }
 
 .date-title {
     display: flex;
     align-items: center;
-    gap: 2px;
-    
+    gap: 6px;
 }
+
 .date-title svg {
-    height: 14px;
-    color: gray;
+    color: var(--primary);
 }
 
 .date-input {
     width: 100%;
     box-sizing: border-box;
-    background-color: #f4f7fa;
-    border: 1px solid rgb(233, 233, 233);
+    background-color: var(--bg-input);
+    border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 15px 20px;
-    font-size: 17px;
-    font-family: Plus Jakarta Sans,system-ui,sans-serif;
+    padding: 10px 14px;
+    font-size: 15px;
+    color: var(--text-main);
+    font-family: inherit;
+    outline: none;
 }
 
 .class-subject-filter-div {
     display: flex;
     gap: 10px;
     align-items: center;
-    font-family: Plus Jakarta Sans,system-ui,sans-serif;
-    
+    font-family: inherit;
 }
 
 .class-subject-filter {
     flex: 1;
 }
-  
+
 .class-dropdown,
 .subject-dropdown {
     width: 100%;
-    background-color: #f4f7fa;
-    border: 1px solid rgb(233, 233, 233);
+    background-color: var(--bg-input);
+    border: 1px solid var(--border);
     border-radius: 10px;
-    padding: 15px 0px;
-    font-size: 17px;
-    font-family: Plus Jakarta Sans,system-ui,sans-serif;
-    padding-left: 13px;
-}   
+    padding: 10px 12px;
+    font-size: 14px;
+    color: var(--text-main);
+    font-family: inherit;
+    outline: none;
+}
 
-    
-    
-
-
-.class-subject-input {
-    width: 100%;
-    background-color: #f4f7fa;
-    border: 1px solid rgb(233, 233, 233);
-    border-radius: 10px;
-    padding: 10px 0px;
-    font-family: Plus Jakarta Sans,system-ui,sans-serif;
+.class-dropdown:focus,
+.subject-dropdown:focus,
+.date-input:focus {
+    border-color: var(--primary);
 }
 
 .attendence-students-list {
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    padding-bottom: 65px;
-    margin: 16px;
-    background-color: white;
-    border-radius: 30px;
-    
+    padding: 30px 20px;
+    margin: 12px 14px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--card-radius);
     justify-content: center;
     align-items: center;
+    box-shadow: var(--shadow);
 }
+
 .attendence-students-list-demo {
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    margin: 12px;
+    padding: 20px;
     border-radius: 10px;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     align-items: center;  
-    
 }
 
-
 .choose-text {
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--text-main);
     text-align: center;
 }
 
 .pick-text {
-    color: gray;
+    color: var(--text-muted);
+    font-size: 13px;
     text-align: center;
-    
 }
 
+/* Present / Absent Top Bar */
 .present-absent-allabsent-div {
-    background-color: rgb(238, 232, 232);
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    height: 50px;
-    padding: 10px;
-    padding-right: 16px;
-    padding-left: 16px;
-    margin-bottom: 20px;
+    gap: 8px;
+    padding: 8px 14px;
     position: fixed;
-    top: 185px;
-    height: 50px;
+    top: 175px;
     left: 0;
     right: 0;
     z-index: 20;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
 .present-div,
@@ -161,139 +131,159 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    background-color: rgba(222, 213, 213, 0.859);
-    height: 100%;
-    border-radius: 10px;
-    padding: 1px;
-    
+    gap: 6px;
+    height: 38px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .present-div {
-    color: green;
+    background-color: var(--success-light);
+    color: #065f46;
+}
+
+body.dark-theme .present-div {
+    background-color: rgba(16, 185, 129, 0.2);
+    color: #34d399;
 }
 
 .absent-div {
-    color: red;
+    background-color: var(--danger-light);
+    color: #991b1b;
 }
 
+body.dark-theme .absent-div {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #f87171;
+}
 
-.present-absent-allabsent-div button {
+.all-absent-btn {
     flex: 1;
-    border:none;
-    height: 100%;
-    background-color: rgba(204, 195, 195, 0.859);
-    border-radius: 10px;
-    font-size: 15px;
-    text-align: center;
-    color: rgb(202, 144, 19);
-    
-    
-
+    border: 1px solid var(--border);
+    height: 38px;
+    background-color: var(--bg-input);
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #d97706;
+    cursor: pointer;
+    transition: all 0.15s;
 }
 
-
-.students-list-attendence-div {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    background-color: white;
-    border-radius: 20px;
-    border: solid 1px green;
-    position: relative;
+.all-absent-btn:hover {
+    background-color: #fef3c7;
 }
 
+body.dark-theme .all-absent-btn:hover {
+    background-color: rgba(217, 119, 6, 0.2);
+}
+
+/* Student Cards Grid */
 .attendence-students-list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));    
-    row-gap: 10px;
-    column-gap: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 90px;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));    
+    gap: 12px;
+    margin: 70px 14px 20px;
+}
+
+.students-list-attendence-div,
+.students-list-attendence-absent-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 10px;
+    background-color: var(--bg-card);
+    border-radius: 14px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.12s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: var(--shadow);
+}
+
+.students-list-attendence-div:hover,
+.students-list-attendence-absent-div:hover {
+    transform: translateY(-2px);
+}
+
+.students-list-attendence-div {
+    border: 2px solid #10b981;
+}
+
+.students-list-attendence-absent-div {
+    border: 2px solid #ef4444;
 }
 
 .attendence-profile-picture {
-    height: 50px;
-    width: 50px;
-    border-radius: 20px;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #cbd5e1;
 }
 
 .attendence-student-name {
-    margin-top: 4px;
-   font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-main);
+    text-align: center;
+    word-break: break-word;
 }
 
 .present-status-div {
     margin-top: 6px;
-    background-color: green;
-    border: none;
+    background-color: #10b981;
     color: white;
-    padding: 7px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    display: flex;
-    gap: 5px;
-}
-
-.present-status-div svg {
-    height: 14px ;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
 .absent-status-div {
     margin-top: 6px;
-    background-color: red;
-    border: none;
+    background-color: #ef4444;
     color: white;
-    padding: 7px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    display: flex;
-    gap: 5px;
-}
-
-.absent-status-div svg {
-    height: 14px ;
-}
-
-.students-list-attendence-absent-div {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-flex;
     align-items: center;
-    padding: 15px;
-    background-color: white;
-    border-radius: 20px;
-    border: solid 1px red;
-}
-
-.js-attendence-student-list {
-    
-}
-
-.save-attendence-button {
-    background-color: #2f5e8c;
-    color: white;
-    border: none;
-    padding: 20px;
-    margin-top: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 15px;
-    flex: 1;
-    font-size: 15px;
-    font-weight: bold;
-
+    gap: 4px;
 }
 
 .save-button-div {
     display: flex;
     justify-content: center;
-    
+    padding: 0 14px 24px;
+}
 
+.save-attendence-button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(36, 91, 112, 0.3);
+    transition: opacity 0.15s;
+}
+
+.save-attendence-button:hover {
+    opacity: 0.92;
+}
+
+.save-attendence-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }

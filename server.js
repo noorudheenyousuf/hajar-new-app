@@ -14,6 +14,7 @@ import teacherRoutes from './server/routes/teacherRoutes.js';
 import subjectRoutes from './server/routes/subjectRoutes.js';
 import attendanceRoutes from './server/routes/attendanceRoutes.js';
 import settingRoutes from './server/routes/settingRoutes.js';
+import backupRoutes from './server/routes/backupRoutes.js';
 
 dotenv.config();
 
@@ -43,6 +44,7 @@ app.use('/api/teachers', teacherRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/attendance', attendanceRoutes);
 app.use('/api/settings', settingRoutes);
+app.use('/api/backup', backupRoutes);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

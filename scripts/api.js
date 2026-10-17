@@ -156,5 +156,16 @@ export const api = {
       method: 'PUT',
       body: JSON.stringify(settingsData)
     });
+  },
+
+  // Backup & Restore
+  async exportBackup() {
+    return await request('/api/backup/export');
+  },
+  async importBackup(backupPayload) {
+    return await request('/api/backup/import', {
+      method: 'POST',
+      body: JSON.stringify(backupPayload)
+    });
   }
 };
